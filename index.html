@@ -7,16 +7,32 @@
         <title>Document</title>
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body>
-        <div class="w-[400px] mx-auto mt-4">
-            <div class="flex items-center justify-between mb-4">
-                <input type="text" id="inputText" class="border h-10 px-3 flex-1" />
-                <button id="btnAdd" class="h-10 px-3 bg-green-500 text-white">Add</button>
+    <body class="w-screen h-screen flex items-center justify-center">
+        
+        <div class="w-[600px] border border-[#A7A7A7]">
+            <div class="bg-[#F0F0F0] relative h-[50px] px-[15px] flex items-center justify-between">
+                <h3>Quiz App</h3>
+                <div class="h-[35px] px-[10px] flex items-center justify-center bg-[#626262] rounded-[6px] text-white">
+                    Time: <span id="quizTime" class="flex w-[25px] h-[25px] bg-[#FFA722] items-center justify-center ml-2 rounded">10</span>
+                </div>
             </div>
-            <ul class="border divide-y" id="list-content">
-            </ul>
+            <div class="border-b border-t border-[#A7A7A7] p-[30px]">
+                <h3 class="mb-[16px]" id="questionTitle"></h3>
+                <div class="space-y-[10px]" id="questionOption"></div>
+            </div>
+            <div class="bg-[#F0F0F0] relative h-[50px] px-[15px] flex items-center justify-between">
+                <div class="flex px-[12px] h-[35px] text-white h-[25px] bg-[#FFA722] items-center justify-center ml-2 rounded">
+                    <span id="currentQuestion"></span>
+                    <span class="mx-1">/</span>
+                    <span id="totalQuestion"></span>
+                </div>
+                <button class="bg-[#2260FF] px-[12px] h-[35px] text-white rounded-lg hidden" id="nextQuestion">
+                    Next Question
+                </button>
+            </div>
         </div>
 
+        <script src="./data.js"></script>
         <script src="./script.js"></script>
     </body>
 </html>
